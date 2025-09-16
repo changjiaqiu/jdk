@@ -17,6 +17,8 @@ import jdk.test.lib.Asserts;
 public class TestTableSwitch{
     public static void main(String[] args) throws Exception {
         preInit();
+        testBasicBoundaryScenarios();
+        testLargeRangeSwitch();
     }
 
     // Pre-initialize required classes (consistent with TestTypeConversion)
@@ -71,7 +73,7 @@ public class TestTableSwitch{
         }
     }
 
-    private static void testBasicBoundaryScenarios(){
+    private static void testLargeRangeSwitch(){
         Asserts.assertEquals(largeRangeSwitch(999),-100);
         Asserts.assertEquals(largeRangeSwitch(1000),1000);
         Asserts.assertEquals(largeRangeSwitch(1001),1001);
