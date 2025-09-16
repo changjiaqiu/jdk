@@ -664,7 +664,7 @@ void JeandleAbstractInterpreter::interpret_block(JeandleBasicBlock* block) {
       case Bytecodes::_ldiv: // fall through
       case Bytecodes::_lrem: // fall through
       case Bytecodes::_land: // fall through
-      case Bytecodes::_lor:  // fall throughtable_switch
+      case Bytecodes::_lor:  // fall through
       case Bytecodes::_lxor: // fall through
       case Bytecodes::_lneg: arith_op(BasicType::T_LONG, code); break;
       case Bytecodes::_lshl:  // fall through
@@ -682,7 +682,7 @@ void JeandleAbstractInterpreter::interpret_block(JeandleBasicBlock* block) {
       case Bytecodes::_dsub: // fall through
       case Bytecodes::_dmul: // fall through
       case Bytecodes::_ddiv: // fall through
-      case Bytecodes::_dneg: arith_op(BasicType::T_DOUBLE, code); btable_switchreak;
+      case Bytecodes::_dneg: arith_op(BasicType::T_DOUBLE, code); break;
       case Bytecodes::_drem: rem_op(BasicType::T_DOUBLE, code); break;
 
       // Conversions:
