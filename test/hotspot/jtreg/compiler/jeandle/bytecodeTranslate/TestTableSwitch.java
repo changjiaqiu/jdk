@@ -57,11 +57,11 @@ public class TestTableSwitch{
         Asserts.assertEquals(minPositiveSwitch(2),2);
         Asserts.assertEquals(minPositiveSwitch(3),3);
 
-        Asserts.assertEquals(minPositiveSwitch(-2),-100);
-        Asserts.assertEquals(minPositiveSwitch(-1),-1);
-        Asserts.assertEquals(minPositiveSwitch(0),0);
-        Asserts.assertEquals(minPositiveSwitch(1),1);
-        Asserts.assertEquals(minPositiveSwitch(2),-100);
+        Asserts.assertEquals(zeroCrossSwitch(-2),-100);
+        Asserts.assertEquals(zeroCrossSwitch(-1),-1);
+        Asserts.assertEquals(zeroCrossSwitch(0),0);
+        Asserts.assertEquals(zeroCrossSwitch(1),1);
+        Asserts.assertEquals(zeroCrossSwitch(2),-100);
     }
 
     public static int largeRangeSwitch(int num){
