@@ -425,7 +425,7 @@ bool NativeInstruction::is_ldr_unsigned_at(address instr) {
 
 bool NativeInstruction::is_add_imm_at(address instr) {
   unsigned insn = *(unsigned*)instr;
-  return Instruction_aarch64::extract(insn, 31 ,22) == 0b1001000100;
+  return Instruction_aarch64::extract(insn, 31, 22) == 0b1001000100;
 }
 
 bool NativeInstruction::is_ldr_literal_at(address instr) {
