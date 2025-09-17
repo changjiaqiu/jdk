@@ -178,7 +178,7 @@ void BasicBlockBuilder::generate_blocks() {
         break;
       }
 
-      case Bytecodes::_tableswitch:{
+      case Bytecodes::_tableswitch: {
         // Set block for each case.
         Bytecode_tableswitch sw(&codes);
         int length = sw.length();
@@ -949,15 +949,15 @@ void JeandleAbstractInterpreter::table_switch() {
 
   int length = sw.length();
   int cur_bci = _codes.cur_bci();
-  int low=sw.low_key();
+  int low = sw.low_key();
 
   llvm::Value* idx = _jvm->ipop();
   llvm::BasicBlock* default_block = bci2block()[cur_bci + sw.default_offset()]->llvm_block();
   llvm::SwitchInst* switch_inst = _ir_builder.CreateSwitch(idx, default_block, length);
 
   for (int i = 0; i < length; i++) {
-    llvm::BasicBlock* case_block=bci2block()[cur_bci+sw.dest_offset_at(i)]->llvm_block();
-    switch_inst->addCase(JeandleType::int_const(_ir_builder, i+low), case_block);
+    llvm::BasicBlock* case_block = bci2block()[cur_bci + sw.dest_offset_at(i)]->llvm_block();
+    switch_inst->addCase(JeandleType::int_const(_ir_builder, i + low), case_block);
   }
 }
 
