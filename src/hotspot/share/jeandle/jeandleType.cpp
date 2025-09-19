@@ -18,11 +18,11 @@
  *
  */
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#include "jeandle/jeandleUtils.hpp"
+#include "jeandle/jeandleType.hpp"
+
 LLVM_HEADER_BEGIN
 #include "llvm/IR/Jeandle/Metadata.h"
-
-#include "jeandle/jeandleType.hpp"
 LLVM_HEADER_END
 
 llvm::Type* JeandleType::java2llvm(BasicType java_type, llvm::LLVMContext& context) {

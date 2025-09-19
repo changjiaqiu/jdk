@@ -18,12 +18,12 @@
  *
  */
 
-#include "../../share/compiler/llvm_hotspot_macros.hpp"
-LLVM_HEADER_BEGIN
-#include "llvm/ExecutionEngine/JITLink/aarch64.h"
-
+#include "../../share/jeandle/jeandleUtils.hpp"
 #include "jeandle/jeandleAssembler.hpp"
 #include "jeandle/jeandleCompilation.hpp"
+
+LLVM_HEADER_BEGIN
+#include "llvm/ExecutionEngine/JITLink/aarch64.h"
 LLVM_HEADER_END
 
 #include "code/nativeInst.hpp"

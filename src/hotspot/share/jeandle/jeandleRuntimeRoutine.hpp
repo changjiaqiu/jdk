@@ -21,7 +21,8 @@
 #ifndef SHARE_JEANDLE_RUNTIME_ROUTINE_HPP
 #define SHARE_JEANDLE_RUNTIME_ROUTINE_HPP
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#include "jeandle/jeandleUtils.hpp"
+
 LLVM_HEADER_BEGIN
 #include "llvm/IR/Jeandle/Metadata.h"
 #include "llvm/IR/Module.h"

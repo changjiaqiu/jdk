@@ -21,7 +21,10 @@
 #ifndef SHARE_JEANDLE_COMPILATION_HPP
 #define SHARE_JEANDLE_COMPILATION_HPP
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#include "jeandle/jeandleUtils.hpp"
+#include "jeandle/jeandleCompiledCode.hpp"
+
+
 LLVM_HEADER_BEGIN
 #include "llvm/IR/Module.h"
 #include "llvm/IR/Function.h"
@@ -29,8 +32,6 @@ LLVM_HEADER_BEGIN
 #include "llvm/Target/TargetMachine.h"
 
 #include <memory>
-
-#include "jeandle/jeandleCompiledCode.hpp"
 LLVM_HEADER_END
 
 #include "ci/ciEnv.hpp"

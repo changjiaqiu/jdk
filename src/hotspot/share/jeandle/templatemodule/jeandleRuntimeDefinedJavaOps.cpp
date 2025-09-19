@@ -18,14 +18,14 @@
  *
  */
 
-#include "compiler/llvm_hotspot_macros.hpp"
-LLVM_HEADER_BEGIN
-#include "llvm/IR/BasicBlock.h"
-#include "llvm/IR/IRBuilder.h"
-
+#include "jeandle/jeandleUtils.hpp"
 #include "jeandle/templatemodule/jeandleRuntimeDefinedJavaOps.hpp"
 #include "jeandle/jeandleRuntimeRoutine.hpp"
 #include "jeandle/jeandleRegister.hpp"
+
+LLVM_HEADER_BEGIN
+#include "llvm/IR/BasicBlock.h"
+#include "llvm/IR/IRBuilder.h"
 LLVM_HEADER_END
 
 #include "runtime/javaThread.hpp"

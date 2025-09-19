@@ -80,11 +80,11 @@
 #ifdef COMPILER2
 #include "opto/c2compiler.hpp"
 #endif
-#include "compiler/llvm_hotspot_macros.hpp"
 #ifdef JEANDLE
+#include "jeandle/jeandleUtils.hpp"
+#include "jeandle/jeandleCompiler.hpp"
 LLVM_HEADER_BEGIN
 #include "llvm/Support/TargetSelect.h"
-#include "jeandle/jeandleCompiler.hpp"
 LLVM_HEADER_END
 #endif // JEANDLE
 #if INCLUDE_JVMCI

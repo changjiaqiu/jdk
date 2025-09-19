@@ -21,17 +21,16 @@
 #ifndef SHARE_JEANDLE_COMPILER_HPP
 #define SHARE_JEANDLE_COMPILER_HPP
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#include "jeandle/jeandleUtils.hpp"
+#include "compiler/abstractCompiler.hpp"
+#include "compiler/compilerDirectives.hpp"
+
 LLVM_HEADER_BEGIN
 #include "llvm/Support/MemoryBuffer.h"
 #include "llvm/Target/TargetMachine.h"
 
-
 #include <memory>
 LLVM_HEADER_END
-
-#include "compiler/abstractCompiler.hpp"
-#include "compiler/compilerDirectives.hpp"
 
 class JeandleCompiler : public AbstractCompiler {
  public:

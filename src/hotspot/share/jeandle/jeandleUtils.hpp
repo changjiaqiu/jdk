@@ -21,7 +21,18 @@
 #ifndef SHARE_JEANDLE_UTILS_HPP
 #define SHARE_JEANDLE_UTILS_HPP
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#define STRINGIFY(x) #x
+#define INCLUDE_HEADER(x) _Pragma(STRINGIFY(include x))
+
+#define LLVM_HEADER_BEGIN \
+    _Pragma("push_macro(\"AARCH64\")") \
+    _Pragma("undef AARCH64") \
+    INCLUDE_HEADER(<cassert>)
+
+#define LLVM_HEADER_END \
+    _Pragma("pop_macro(\"AARCH64\")") \
+    INCLUDE_HEADER("utilities/debug.hpp") 
+    
 LLVM_HEADER_BEGIN
 #include "llvm/IR/Module.h"
 #include "llvm/IR/Function.h"

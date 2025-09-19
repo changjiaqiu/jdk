@@ -18,7 +18,14 @@
  *
  */
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#include "jeandle/jeandleUtils.hpp"
+#include "jeandle/jeandleAbstractInterpreter.hpp"
+#include "jeandle/jeandleCallVM.hpp"
+#include "jeandle/jeandleCompilation.hpp"
+#include "jeandle/jeandleCompiler.hpp"
+#include "jeandle/jeandleType.hpp"
+#include "jeandle/jeandleUtils.hpp"
+
 LLVM_HEADER_BEGIN
 #include "llvm/ADT/SmallVector.h"
 #include "llvm/Bitcode/BitcodeReader.h"
@@ -44,13 +51,6 @@ LLVM_HEADER_BEGIN
 #include <iomanip>
 #include <sstream>
 #include <string>
-
-#include "jeandle/jeandleAbstractInterpreter.hpp"
-#include "jeandle/jeandleCallVM.hpp"
-#include "jeandle/jeandleCompilation.hpp"
-#include "jeandle/jeandleCompiler.hpp"
-#include "jeandle/jeandleType.hpp"
-#include "jeandle/jeandleUtils.hpp"
 LLVM_HEADER_END
 
 #include "ci/ciUtilities.inline.hpp"

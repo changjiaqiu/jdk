@@ -21,7 +21,8 @@
 #ifndef SHARE_JEANDLE_COMPILED_CALL_HPP
 #define SHARE_JEANDLE_COMPILED_CALL_HPP
 
-#include "compiler/llvm_hotspot_macros.hpp"
+#include "jeandle/jeandleUtils.hpp"
+
 LLVM_HEADER_BEGIN
 #include "llvm/IR/Function.h"
 #include "llvm/IR/Type.h"

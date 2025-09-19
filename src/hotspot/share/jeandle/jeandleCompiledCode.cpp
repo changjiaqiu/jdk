@@ -18,15 +18,15 @@
  *
  */
 
-#include "compiler/llvm_hotspot_macros.hpp"
-LLVM_HEADER_BEGIN
-#include "llvm/Support/DataExtractor.h"
-
+#include "jeandle/jeandleUtils.hpp"
 #include "jeandle/jeandleAssembler.hpp"
 #include "jeandle/jeandleCompilation.hpp"
 #include "jeandle/jeandleCompiledCode.hpp"
 #include "jeandle/jeandleRegister.hpp"
 #include "jeandle/jeandleRuntimeRoutine.hpp"
+
+LLVM_HEADER_BEGIN
+#include "llvm/Support/DataExtractor.h"
 LLVM_HEADER_END
 
 #include "asm/macroAssembler.hpp"
