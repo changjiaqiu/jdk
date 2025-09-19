@@ -18,8 +18,8 @@
  *
  */
 
-#include "jeandle/jeandleCompiledCode.hpp"
 #include "jeandle/jeandleCompilation.hpp"
+#include "jeandle/jeandleCompiledCode.hpp"
 
 // Get the frame size from .stack_sizes section.
 void JeandleCompiledCode::setup_frame_size() {

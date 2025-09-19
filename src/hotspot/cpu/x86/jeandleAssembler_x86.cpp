@@ -18,13 +18,14 @@
  *
  */
 
-#include <cassert>
+#include "compiler/llvm_hotspot_macros.hpp"
+LLVM_HEADER_BEGIN
 #include "llvm/ExecutionEngine/JITLink/x86_64.h"
 
 #include "jeandle/jeandleAssembler.hpp"
 #include "jeandle/jeandleCompilation.hpp"
+LLVM_HEADER_END
 
-#include "utilities/debug.hpp"
 #include "code/nativeInst.hpp"
 #include "runtime/sharedRuntime.hpp"
 

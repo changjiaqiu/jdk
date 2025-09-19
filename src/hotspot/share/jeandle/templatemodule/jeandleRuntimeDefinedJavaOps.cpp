@@ -18,15 +18,16 @@
  *
  */
 
-#include <cassert>
+#include "compiler/llvm_hotspot_macros.hpp"
+LLVM_HEADER_BEGIN
 #include "llvm/IR/BasicBlock.h"
 #include "llvm/IR/IRBuilder.h"
 
 #include "jeandle/templatemodule/jeandleRuntimeDefinedJavaOps.hpp"
 #include "jeandle/jeandleRuntimeRoutine.hpp"
 #include "jeandle/jeandleRegister.hpp"
+LLVM_HEADER_END
 
-#include "utilities/debug.hpp"
 #include "runtime/javaThread.hpp"
 #include "runtime/safepointMechanism.hpp"
 //                  name, lower_phase, return_type, arg_types

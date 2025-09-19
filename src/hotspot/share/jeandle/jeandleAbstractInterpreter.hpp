@@ -21,7 +21,8 @@
 #ifndef SHARE_JEANDLE_ABSTRACT_INTERPRETER_HPP
 #define SHARE_JEANDLE_ABSTRACT_INTERPRETER_HPP
 
-#include <cassert>
+#include "compiler/llvm_hotspot_macros.hpp"
+LLVM_HEADER_BEGIN
 #include "llvm/IR/BasicBlock.h"
 #include "llvm/ADT/DenseMap.h"
 #include "llvm/IR/IRBuilder.h"
@@ -30,8 +31,8 @@
 #include <vector>
 
 #include "jeandle/jeandleCompilation.hpp"
+LLVM_HEADER_END
 
-#include "utilities/debug.hpp"
 #include "ci/compilerInterface.hpp"
 #include "memory/allocation.hpp"
 #include "utilities/bitMap.inline.hpp"

@@ -18,7 +18,8 @@
  *
  */
 
-#include <cassert>
+#include "compiler/llvm_hotspot_macros.hpp"
+LLVM_HEADER_BEGIN
 #include "llvm/Support/DataExtractor.h"
 
 #include "jeandle/jeandleAssembler.hpp"
@@ -26,8 +27,8 @@
 #include "jeandle/jeandleCompiledCode.hpp"
 #include "jeandle/jeandleRegister.hpp"
 #include "jeandle/jeandleRuntimeRoutine.hpp"
+LLVM_HEADER_END
 
-#include "utilities/debug.hpp"
 #include "asm/macroAssembler.hpp"
 #include "ci/ciEnv.hpp"
 #include "code/vmreg.inline.hpp"

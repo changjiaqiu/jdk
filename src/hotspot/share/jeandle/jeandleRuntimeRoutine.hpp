@@ -21,15 +21,13 @@
 #ifndef SHARE_JEANDLE_RUNTIME_ROUTINE_HPP
 #define SHARE_JEANDLE_RUNTIME_ROUTINE_HPP
 
-#include <cassert>
-#pragma push_macro("AARCH64")
-#undef AARCH64
+#include "compiler/llvm_hotspot_macros.hpp"
+LLVM_HEADER_BEGIN
 #include "llvm/IR/Jeandle/Metadata.h"
 #include "llvm/IR/Module.h"
 #include "llvm/Target/TargetMachine.h"
-#pragma pop_macro("AARCH64")
+LLVM_HEADER_END
 
-#include "utilities/debug.hpp"
 #include "memory/allStatic.hpp"
 #include "runtime/javaThread.hpp"
 #include "utilities/globalDefinitions.hpp"

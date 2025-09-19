@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025, the Jeandle-JDK Authors. All Rights Reserved.
+ * Copyright (c) 2008, 2023, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -16,26 +16,25 @@
  * 2 along with this work; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
  *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ *
  */
 
-#ifndef SHARE_JEANDLE_UTILS_HPP
-#define SHARE_JEANDLE_UTILS_HPP
+#ifndef JEANDLE_JDK_LLVM_HOTSPOT_MACROS_H
+#define JEANDLE_JDK_LLVM_HOTSPOT_MACROS_H
 
-#include "compiler/llvm_hotspot_macros.hpp"
-LLVM_HEADER_BEGIN
-#include "llvm/IR/Module.h"
-#include "llvm/IR/Function.h"
-LLVM_HEADER_END
+#define STRINGIFY(x) #x
+#define INCLUDE_HEADER(x) _Pragma(STRINGIFY(include x))
 
-#include "ci/ciMethod.hpp"
+#define LLVM_HEADER_BEGIN \
+    _Pragma("push_macro(\"AARCH64\")") \
+    _Pragma("undef AARCH64") \
+    INCLUDE_HEADER(<cassert>)
 
+#define LLVM_HEADER_END \
+    _Pragma("pop_macro(\"AARCH64\")") \
+    INCLUDE_HEADER("utilities/debug.hpp")
 
-class JeandleFuncSig : public AllStatic {
- public:
-  // Create a llvm function according to the Java method.
-  static llvm::Function* create_llvm_func(ciMethod* method, llvm::Module& target_module);
-  static std::string method_name(ciMethod* method);
-  static void setup_description(llvm::Function* func, bool is_stub = false);
-};
-
-#endif // SHARE_JEANDLE_UTILS_HPP
+#endif

@@ -18,8 +18,8 @@
  *
  */
 
-#include <cassert>
-
+#include "compiler/llvm_hotspot_macros.hpp"
+LLVM_HEADER_BEGIN
 #include "llvm/Bitcode/BitcodeWriter.h"
 #include "llvm/IRReader/IRReader.h"
 #include "llvm/MC/TargetRegistry.h"
@@ -33,6 +33,7 @@
 #include "jeandle/jeandleType.hpp"
 #include "jeandle/templatemodule/jeandleRuntimeDefinedJavaOps.hpp"
 #include "runtime/arguments.hpp"
+LLVM_HEADER_END
 
 JeandleCompiler::JeandleCompiler(llvm::TargetMachine* target_machine) :
                                  AbstractCompiler(compiler_jeandle),

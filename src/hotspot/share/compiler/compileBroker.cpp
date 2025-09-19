@@ -23,12 +23,6 @@
  *
  */
 
-#ifdef JEANDLE
-#include <cassert>
-#include "llvm/Support/TargetSelect.h"
-#include "utilities/debug.hpp"
-#endif // JEANDLE
-
 #include "precompiled.hpp"
 #include "classfile/javaClasses.inline.hpp"
 #include "classfile/symbolTable.hpp"
@@ -86,11 +80,12 @@
 #ifdef COMPILER2
 #include "opto/c2compiler.hpp"
 #endif
+#include "compiler/llvm_hotspot_macros.hpp"
 #ifdef JEANDLE
-#pragma push_macro("AARCH64")
-#undef AARCH64
+LLVM_HEADER_BEGIN
+#include "llvm/Support/TargetSelect.h"
 #include "jeandle/jeandleCompiler.hpp"
-#pragma pop_macro("AARCH64")
+LLVM_HEADER_END
 #endif // JEANDLE
 #if INCLUDE_JVMCI
 #include "jvmci/jvmciEnv.hpp"
